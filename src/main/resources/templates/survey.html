@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Questions Page</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <div class="title-container">        
+        <h1>Survey</h1>
+    </div>
+    <br>
+
+    <!-- Form to submit answers -->
+    <form action="/submitAnswers" method="post">
+        <!-- Loop over questions -->
+        <div th:each="question, qStat : ${questions}" class="question-container">
+            <div>
+                <!-- Display the question text -->
+                <h3 th:text="${question.text}"></h3>
+                <!-- Loop over answers -->
+                <div th:each="answer, aStat : ${question.answers}" class="answer-container">
+                    <label>
+                        <!-- Radio button for each answer -->
+                        <input type="radio" 
+                               th:name="'question_' + ${qStat.index}" 
+                               th:value="${aStat.index}"
+                               th:id="'question_' + ${qStat.index} + '_answer_' + ${aStat.index}" />
+                    </label>
+                    <!-- Display the answer text -->
+                    <label th:for="'question_' + ${qStat.index} + '_answer_' + ${aStat.index}"
+                           th:text="${answer.text}"></label>
+                </div>
+            </div>
+        </div>
+        <!-- Submit button -->
+        <button class="submit-ans-button" type="submit">Submit Answers</button>
+    </form>
+
+    <!-- Button to navigate back to the survey-creation page -->
+    <a href="/survey-creation">
+        <button class="back-vot-button" type="button">Back to Question Creation</button>
+    </a>
+</body>
+</html>

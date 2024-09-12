@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Results</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div class="title-container">	
+<h1>Survey Results</h1>
+</div>
+<br>
+
+<!-- Display message if there is any -->
+<div th:if="${message}" class="alert alert-danger" th:text="${message}"></div>
+
+<!-- Display the selected answers -->
+<div th:if="${selectedAnswers != null}" class="question-container">
+    <h2>Your Answers</h2>
+    <ul>
+        <li th:each="answer : ${selectedAnswers}" th:text="${answer}" class="your-answers-container"></li>
+    </ul>
+</div>
+<br>
+
+<div class="question-container">
+	
+<!-- Table to display all questions and their answers with updated counters -->
+<h2>All Questions and Answers</h2>
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Question Text</th>
+                <th>Answer Text</th>
+                <th>Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="question : ${questions}">
+                <td th:text="${question.text}"></td>
+                <td>
+                    <ul>
+                        <li th:each="answer : ${question.answers}">
+                            <span th:text="${answer.text}"></span>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li th:each="answer : ${question.answers}">
+                            <span th:text="${answer.counter}"></span>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<br><br><br><br>
+<!-- Navigation buttons -->
+    <a href="/survey-creation" class="back-surv-creat-button">Back to Questions Creation</a>
+	<br><br><br><br><br><br>
+    <a href="/survey" class="back-vot-button">Back to Voting</a>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFBF4; /* Light turquoise background */
+    color: #000; /* Black text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #004d40; /* Darker turquoise for headings */
+    text-align: center;
+    padding: 20px;
+}
+
+h2{
+	text-align: center;
+}
+
+.your-answers-container{
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	background-color: #FFFBF4;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+    padding: 10px;
+    background-color: #f7eddc; /* White background for questions */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for each question and its elements */
+.question-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 6%;
+    padding: 10px;
+    background-color: #f7eddc; /* White background for questions */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.secondary-title-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+    padding: 10px;
+    background-color: #f7eddc; /* White background for questions */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.question-container ul li {
+    margin-bottom: 20px; /* add this line to increase spacing between answers */
+}
+
+.question-container ul {
+    list-style: none; /* add this line to remove bullet points */
+}
+
+.delete-answer-button {
+    display: inline-block; /* add this line to make the button an inline block element */
+    margin: 0 auto; /* add this line to center the button horizontally */
+}
+
+.new-question-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 4%;
+    padding: 10px;
+    background-color: #f7eddc; /* White background for questions */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.answer-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    background-color: #FFFBF4; /* White background for answers */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+.question-form,
+.answer-form,
+.remove-question-form,
+.remove-answer-form,
+.add-answer-form {
+    margin-right: 10px;
+}
+
+/* Button styling */
+button {
+    /*background-color: #87c1c9; /* Teal button color */
+    background-color: #806040; /* Teal button color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e6a667; /* Darker teal on hover */
+}
+
+.wide-input {
+  margin-left: 10px;
+  width: calc(100% - 30px);
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: #e0f7fa;
+}
+
+/* Aligning input fields and labels */
+.question-form label,
+.answer-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.remov-ques-button {
+	margin-left: 44%;
+	margin-right: 42%;
+    margin-top: 2%;
+    padding: 0.5%;
+}
+
+.delete-question-button {
+    margin-left: 44%;
+    margin-right: 42%;
+    margin-top: 2%;
+    padding: 0.5%;
+}
+
+.remov-ans-button {
+    margin-left: 45%;
+    margin-right: 43%;
+    margin-top: 2%;
+    padding: 0.5%;
+}
+
+.delete-answer-button {
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 2%;
+    padding: 0.5%;
+}
+
+.add-ans-button {
+	margin-left: 44%;
+	margin-right: 42%;
+	margin-top: 2%;
+	padding: 0.5%;
+}
+
+.add-ques-button {
+	margin-left: 44%;
+	margin-right: 42%;
+    margin-bottom: 1%;
+    margin-top: 4%;
+    padding: 1%;
+}
+
+.go-to-vote-button {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
+    padding: 1%;
+}
+
+.back-vot-button{
+    background-color: #806040; /* Teal button color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
+    padding: 1%;
+}
+
+.back-surv-creat-button{
+    background-color: #806040; /* Teal button color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 1%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    padding: 1%;
+}
+
+.submit-ans-button{
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 5%;
+    padding: 1%;
+}
+
+.save-button{
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 5%;
+    padding: 1%;
+}
+
+/* Table styling */
+.table-container {
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin: 20px 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #e6a667; /* Teal background for header */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #fcf9f0; /* Light grey for even rows */
+}
+
+.table tr:hover {
+    background-color: #f2d99d; /* Light purple on hover */
+}
+
+.table td {
+    color: #333333; /* Dark grey text */
+}
+
+.table td ul {
+    list-style-type: none; /* Remove bullet points from lists in table cells */
+    padding: 0;
+    margin: 0;
+}
+
+.table td li {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Button styling */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #806040; /* Optional: Set a default color for links */
+}
+
